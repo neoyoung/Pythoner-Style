@@ -1,8 +1,8 @@
 ## Pythoner' Style
 
-###         Pythoner的自我修养
-###         全栈工程师的工程实践
-###                             By neoyoung  2019.10.21
+####  Pythoner的自我修养
+####  全栈工程师的工程实践
+######        By neoyoung  2019.10.21
 
 ---
 
@@ -10,10 +10,21 @@
 
 
 - Python全栈工程师
-- Linux环境搭建、初级运维、Shell脚本
-- 前端：熟悉掌握HTML5 CSS JavaScript[jQuery Vue TypeScript] 
+- Linux:各种生产环境搭建、系统运维、Shell脚本
+- 前端：熟悉掌握HTML5 CSS JavaScript jQuery Vue TypeScript 
 - 后端：熟练掌握Python Web框架Flask Django Tornado 
 - 数据库：Mysql  MariaDb  NoSql：MongoDB  Redis  Sqlite
+- 
+
++++
+
+## 技术分享主题
+
+- 技术雷达
+- 代码风格
+- 编程范式
+- 
+- 
 - 
 
 +++
@@ -79,14 +90,14 @@
 
 ---
 
-#  何谓Pythonic?
+##  何谓Pythonic?
 
 - Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合Python的惯用法，使用的都是Python的语法糖(我觉得可以翻译为『地道』)。
 - 比如从其他语言转到Python的写出来的代码很可能受到以前思维方式的影响(别像 java 一样写一堆 getter/setter)，写出来的代码不够Pythonic
 
 ---
 
-#  Pythonic的代码
+####  Pythonic的代码
 '''
 code-block:: python
 
