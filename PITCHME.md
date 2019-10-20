@@ -1,5 +1,7 @@
-## Django Migrations Under the Hood
+## Pythoner' Style
 
+    Pythoner的自我修养
+    全栈工程师的工程实践
 ###                             By neoyoung  2019.10.21
 
 ---
