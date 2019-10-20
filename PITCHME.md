@@ -2,9 +2,9 @@
 
 ####  Pythoner的自我修养
 ####  全栈工程师的工程实践
-######        By neoyoung  2019.10.21
+######        @neoyoung
 
----
++++
 
 ### 关于我
 
@@ -23,9 +23,12 @@
 - 技术雷达
 - 代码风格
 - 编程范式
-- 
-- 
-- 
+- 敏捷与TDD
+- 业务代码规范
+- 命名规范
+- 注释与docstring
+- 异常处理
+- 安全处理
 
 +++
 
@@ -35,11 +38,11 @@
 - 可以在数据库，框架，编程语言，基础组件等建立技术雷达，以供业务选型
 
 ---
-
+#### 常见技术问题方案
   - 统一编程语言和框架。比如使用 cookiecutter 之类的工具生成统一的项目代码框架，有利于统一维护
   - 统一数据库选型。统一建表规范，防止给以后埋坑
   - 统一基础组件(中小公司可能没有，尽量使用成熟的开源组件)
-  - 不同团队之间可以使用不同技术栈，不过小组内部统一技术栈有利于快速业务迭代，总结 bestpractice。
+  - 不同团队之间可以使用不同技术栈，不过小组内部统一技术栈有利于快速业务迭代，总结 bestpractice
   - 小组定期技术分享，打造学习型团队
   
 ---
@@ -54,17 +57,17 @@
 
 +++
 
-- 《PEP8.org》 (http://pep8.org/)
-* 《PEP 8 -- Style Guide for Python Code》 (https://www.python.org/dev/peps/pep-0008/)
-* 《Google开源项目风格指南-Python风格指南》 (http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/)_ Google风格的docstring比较赞
-* 《API_coding_style》 (http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html)
-* 《code-example》 (https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
-* 《编写优雅代码》 (http://www.kancloud.cn/kancloud/sina-boot-camp/64003)  新浪微博的培训课程，可以学习一下
-* 《烂代码的那些事》 (http://blog.2baxb.me/archives/1343)  Axb的自我修养，大神的文章
-* 《三种docstring示例》 (http://bwanamarko.alwaysdata.net/napoleon/format_exception.html)
-* 《Simple python style guide》 (http://liyangliang.me/posts/2015/08/simple-python-style-guide/)
-* 《python编程规范》 (http://blog.ganyutao.com/downloading/python%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.pdf)
-* 《practice-go》 (https://dave.cheney.net/practical-go/presentations/qcon-china.html)
+- [《PEP8.org》] (http://pep8.org/)
+- [《PEP 8 -- Style Guide for Python Code》] (https://www.python.org/dev/peps/pep-0008/)
+- [《Google开源项目风格指南-Python风格指南》] (http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/)_ Google风格的docstring比较赞
+- [《API_coding_style》] (http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html)
+- [《code-example》] (https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+- [《编写优雅代码》] (http://www.kancloud.cn/kancloud/sina-boot-camp/64003)  新浪微博的培训课程，可以学习一下
+- [《烂代码的那些事》] (http://blog.2baxb.me/archives/1343)  Axb的自我修养，大神的文章
+- [《三种docstring示例》] (http://bwanamarko.alwaysdata.net/napoleon/format_exception.html)
+- [《Simple python style guide》] (http://liyangliang.me/posts/2015/08/simple-python-style-guide/)
+- [《python编程规范》] (http://blog.ganyutao.com/downloading/python%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.pdf)
+- [《practice-go》] (https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
 +++
 
@@ -98,7 +101,7 @@
 ---
 
 ####  Pythonic的代码
-'''python
+```
     # 不够Pythonic
     if a < b and a > c:
         pass
@@ -116,18 +119,19 @@
     # bad, 不要使用默认可变对象作为默认参数
     def f(a, b=[])
         pass
-
     # good, 可变类型使用 None 作为占位符，因为可变类型可能会被函数修改(副作用)，导致调用代码后边使用它的地方出问题
     def f(a, b=None):
         if b is None:
             b = []
-'''
+```
 
 ---
 
 #### 敏捷与TDD(中华田园敏捷开发：快糙猛，产出一堆 shit)
-----------
-笔者非计算机科班出身，对于软件工程的东西也不是很懂，最近扫了一本《敏捷软件开发-原则、模式与实践》，感觉有些东西还是挺有启发的。在这里稍微提一下敏捷中的TDD(Test-driven development)吧。因为Python是动态类型语言，不像静态语言可以编译期检查，很多问题运行时暴露出来，而且动态语言语法灵活也容易刨坑。用TDD是可以提升代码质量的，虽然有时候完全用TDD可能有些死板，但是TDD的一些思想还是很值得借鉴：
+
+------
+- 敏捷TDD(Test-driven development)
+- 因为Python是动态类型语言，不像静态语言可以编译期检查，很多问题运行时暴露出来，而且动态语言语法灵活也容易刨坑。用TDD是可以提升代码质量的，虽然有时候完全用TDD可能有些死板，但是TDD的一些思想还是很值得借鉴：
 
 * 测试最重要的是对架构和设计的影响，不是为了测试而测试。一般难以测试的代码往往是设计不好，耦合严重的代码。没有测试的代码同时也给重构带来压力和隐患。
 
@@ -731,17 +735,24 @@ Code Review(代码复查)
     - commit 信息（commit信息是否准确，比如附上 jira 或者需求文档地址，bug 地址等，你的代码变动都应该有迹可循, 目前团队加上了提交模板，对于 bug fix、新特性、重构等都需要填写对应的模板信息 https://www.conventionalcommits.org/zh/v1.0.0-beta.2/）
     - 代码洁癖要适度，如果代码遵守了规范并能正确解决问题，就不要吹毛求疵。review 过程中出现分歧是很常见的，每个人都有自己的编码习惯。如果出现难以解决的分歧，可以列出优劣表格，对各自的方式有一个量化的分析（比如从实现难度、可读性、可扩展性、可维护性等方面打分）。如果无伤大雅，不必吹毛求疵。
 
-* `《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 <https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html>`_
-* `《如何用人类的方式进行 Code Review》 <https://zhuanlan.zhihu.com/p/31581735>`_
+- [《https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html》 ](https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html)
+- [《如何用人类的方式进行 Code Review》](https://zhuanlan.zhihu.com/p/31581735)
+
++++
+
+### 日志与异常记录
+
+- 良好的日志对于记录问题至关重要。
+- python有方便的日志模块帮助我们记录，日志输出的代价是比较小的，python的日志模块尽量做到对函数功能没有性能影响，可以在线上和开发环境设置不同的log等级，方便开发调试。注意别再日志语句里引入了bug或异常
+- 有时候需要判断什么时候需要日志，记录哪些东西方便我们排查问题，分析数据
+- 
+对于异常，一定『不要吞掉任何异常』，常有新手上来就try/except，也不区分非退出异常，也没有日志记录(坑啊......)
+- 熟悉python文档的异常机制，可以使用Sentry等工具记录异常
+- 同时发生异常时候的时间，调用点，栈调用信息，locals()变量等要注意记录，给排查错误带来便利。有些错误的复现是比较困难的，这时候日志和异常的作用就凸显出来了
 
 
-日志与异常记录
---------------------------------------
-一定要有良好的日志记录习惯。良好的日志对于记录问题至关重要。python有方便的日志模块帮助我们记录，日志输出的代价是比较小的，python的日志模块尽量做到对函数功能没有性能影响，可以在线上和开发环境设置不同的log等级，方便开发调试。注意别再日志语句里引入了bug或异常。有时候需要判断什么时候需要日志，记录哪些东西方便我们排查问题，分析数据。
-对于异常，一定『不要吞掉任何异常』，常有新手上来就try/except，也不区分非退出异常，也没有日志记录(坑啊......)。请先阅读python文档的异常机制，可以使用Sentry等工具记录异常。同时发生异常时候的时间，调用点，栈调用信息，locals()变量等要注意记录，给排查错误带来便利。有些错误的复现是比较困难的，这时候日志和异常的作用就凸显出来了。
-
-* `《每个 Python 程序员都要知道的日志实践》 <http://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&mid=2652564362&idx=1&sn=f33910af004f276bbef7ae52e0757bcb&chksm=8464c3c0b3134ad617bcffd865894344367fdd2995a0d5ff9c4da30e0c158b3d02b3d616f615&mpshare=1&scene=23&srcid=1124K7Ht1FP2A1Fnvi3HTBE5#rd>`_
-* `《日志的艺术（The art of logging）》 <http://www.cnblogs.com/xybaby/p/7954610.html>`_
+- [《每个 Python 程序员都要知道的日志实践》](http://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&mid=2652564362&idx=1&sn=f33910af004f276bbef7ae52e0757bcb&chksm=8464c3c0b3134ad617bcffd865894344367fdd2995a0d5ff9c4da30e0c158b3d02b3d616f615&mpshare=1&scene=23&srcid=1124K7Ht1FP2A1Fnvi3HTBE5#rd)
+- [《日志的艺术（The art of logging）》](http://www.cnblogs.com/xybaby/p/7954610.html)
 
 调试
 --------------------------------------
@@ -827,19 +838,6 @@ Python 做业务后端的优缺点分析
 
 平常可以留心下周围优秀的同事都有哪些好习惯，我们可以学习并改善下自己的开发流程。
 
-- 12 Schedule Time to Lower Technical Debt
-- 11 Favor Hign Cohesion(low cyclomatic complexity)
-- 10 Favor Losse Coupling
-- 9 Program with Intention(Simple Design: Passes the tests; Revieals intention; No duplication; Fewest elements)
-- 8 Avoid Primitive Obsession(Imperative code is packed with accidental complexity)
-- 7 Prefer Clear Code over Clever Code
-- 6 Apply Zinsser's Principle on Writing(Simplicity;Clarity;Brevity;Humanity)
-- 5 Comment Why, not What
-- 4 Avoid Long Methods--Apply SLAP (long is not about length of code, but levels of abstraction)
-- 3 Give Good Meaningful Names (if we can't name it appropriately, it may be a sign we've not yet understood its true purpose)
-- 2 To Tactical Code Reviews
-- 1 Reduce State & State Mutation
-
 
 技术氛围建设
 ------------------------------------
@@ -850,6 +848,8 @@ Python 做业务后端的优缺点分析
 - 技术复盘。如果有成员导致了重大 bug，可以一起开复盘会进行分析总结，如何避免再犯。
 
 +++
+
+-
 # 开发流程
 ------------------------------------
 
@@ -862,11 +862,11 @@ Python 做业务后端的优缺点分析
 
 Think more, type less. Aim for minimalism, fewer states, less mutability, and just enough code for the known, relevant parts of the problem.
 
++++
 
-《The Zen of Python》 - Tim Peters
+-  《The Zen of Python》 - Tim Peters
 
-'''python
-
+```python
     Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
@@ -886,4 +886,31 @@ Think more, type less. Aim for minimalism, fewer states, less mutability, and ju
     If the implementation is hard to explain, it's a bad idea.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
-'''
+```
++++
+
+-  《Python之禅》 - Tim Peters
+
+```
+    优美胜于丑陋（Python 以编写优美的代码为目标）
+    明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似）
+    简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）
+    复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）
+    扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）
+    间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）
+    可读性很重要（优美的代码是可读的）
+    即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）
+	不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码）
+	当存在多种可能，不要尝试去猜测而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）
+	虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ）
+	做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）
+	如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准）
+	命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）
+```
+
++++?color=#fefdca
+
+# Thanks!
+
+- GitHub地址:  https://github.com/neoyoung/Pythoner-Style
+- Slide 地址： https://gitpitch.com/neoyoung/Pythoner-Style
