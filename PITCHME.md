@@ -6,19 +6,19 @@
 
 ---
 
-## 关于我
-
+### 关于我
 
 - Python全栈工程师
 - Linux:各种生产环境搭建、系统运维、Shell脚本
 - 前端：熟悉掌握HTML5 CSS JavaScript jQuery Vue TypeScript 
-- 后端：熟练掌握Python Web框架Flask Django Tornado 
-- 数据库：Mysql  MariaDb  NoSql：MongoDB  Redis  Sqlite
-- 
+- 后端：熟练掌握Flask Django Tornado Sanic等Web框架
+- 数据库：Mysql MariaDb Postgresql MongoDB  Redis  Sqlite
+- 数据分析：熟悉数据可视化，ML
+- 对Falsk Django及Python部分库源码研究分析
 
 +++
 
-## 技术分享主题
+### 技术分享主题
 
 - 技术雷达
 - 代码风格
@@ -29,7 +29,7 @@
 
 +++
 
-## 技术雷达
+### 技术雷达
 
 - 中小公司尽量统一技术栈，减少运维，维护和学习成本，总结最佳实践
 - 可以在数据库，框架，编程语言，基础组件等建立技术雷达，以供业务选型
@@ -90,7 +90,7 @@
 
 ---
 
-##  何谓Pythonic?
+###  何谓Pythonic?
 
 - Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合Python的惯用法，使用的都是Python的语法糖(我觉得可以翻译为『地道』)。
 - 比如从其他语言转到Python的写出来的代码很可能受到以前思维方式的影响(别像 java 一样写一堆 getter/setter)，写出来的代码不够Pythonic
@@ -98,27 +98,21 @@
 ---
 
 ####  Pythonic的代码
-'''
-code-block:: python
-
+'''python
     # 不够Pythonic
     if a < b and a > c:
         pass
-
     # python里却可以这么写
     if c < a < b:
         pass
-
     # bad
     i = 0
     while i < mylist_length:
         do_something(mylist[i])
         i += 1
-
     # good
     for element in mylist:
        do_something(element)
-
     # bad, 不要使用默认可变对象作为默认参数
     def f(a, b=[])
         pass
@@ -131,8 +125,8 @@ code-block:: python
 
 ---
 
-# 敏捷与TDD(中华田园敏捷开发：快糙猛，产出一堆 shit)
-------------------------------------------------------
+#### 敏捷与TDD(中华田园敏捷开发：快糙猛，产出一堆 shit)
+----------
 笔者非计算机科班出身，对于软件工程的东西也不是很懂，最近扫了一本《敏捷软件开发-原则、模式与实践》，感觉有些东西还是挺有启发的。在这里稍微提一下敏捷中的TDD(Test-driven development)吧。因为Python是动态类型语言，不像静态语言可以编译期检查，很多问题运行时暴露出来，而且动态语言语法灵活也容易刨坑。用TDD是可以提升代码质量的，虽然有时候完全用TDD可能有些死板，但是TDD的一些思想还是很值得借鉴：
 
 * 测试最重要的是对架构和设计的影响，不是为了测试而测试。一般难以测试的代码往往是设计不好，耦合严重的代码。没有测试的代码同时也给重构带来压力和隐患。
