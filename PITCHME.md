@@ -4,7 +4,7 @@
 ####  全栈工程师的工程实践
 ######        @neoyoung
 
-+++
+---
 
 ### 关于我
 
@@ -13,12 +13,22 @@
 - 前端：熟悉掌握HTML5 CSS JavaScript jQuery Vue TypeScript 
 - 后端：熟练掌握Flask Django Tornado Sanic等Web框架
 - 数据库：Mysql MariaDb Postgresql MongoDB  Redis  Sqlite
-- 数据分析：熟悉数据可视化，ML
+- 网络爬虫：熟悉数据可视化，ML
 - 对Falsk Django及Python部分库源码研究分析
 
 +++
 
+###项目经验
+
+- 全栈项目：基于Falsk和Django的博客、论坛、
+- 后端项目：数据api接口、电商后台管理
+- 爬虫项目：各大电影相关网站爬虫、企业商务公开信息爬虫、证券门户信息爬虫
+- 数据项目：证券数据分析、待补充
+
+---
+ 
 ### 技术分享主题
+#####  Python工程师的自我修养
 
 - 技术雷达
 - 代码风格
@@ -30,24 +40,23 @@
 - 异常处理
 - 安全处理
 
-+++
+---
 
 ### 技术雷达
 
 - 中小公司尽量统一技术栈，减少运维，维护和学习成本，总结最佳实践
-- 可以在数据库，框架，编程语言，基础组件等建立技术雷达，以供业务选型
+- 在数据库，框架，编程语言，基础组件等建立技术雷达，以供业务选型
 
----
++++
 #### 常见技术问题方案
   - 统一编程语言和框架。比如使用 cookiecutter 之类的工具生成统一的项目代码框架，有利于统一维护
-  - 统一数据库选型。统一建表规范，防止给以后埋坑
+  - 统一数据库选型
+  - 统一建表规范，防止给以后埋坑
   - 统一基础组件(中小公司可能没有，尽量使用成熟的开源组件)
   - 不同团队之间可以使用不同技术栈，不过小组内部统一技术栈有利于快速业务迭代，总结 bestpractice
   - 小组定期技术分享，打造学习型团队
   
 ---
-
-+++
 
 ## 代码风格
 ```
@@ -57,20 +66,34 @@
 
 +++
 
-- [《PEP8.org》] (http://pep8.org/)
-- [《PEP 8 -- Style Guide for Python Code》] (https://www.python.org/dev/peps/pep-0008/)
-- [《Google开源项目风格指南-Python风格指南》] (http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/)_ Google风格的docstring比较赞
-- [《API_coding_style》] (http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html)
-- [《code-example》] (https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
-- [《编写优雅代码》] (http://www.kancloud.cn/kancloud/sina-boot-camp/64003)  新浪微博的培训课程，可以学习一下
-- [《烂代码的那些事》] (http://blog.2baxb.me/archives/1343)  Axb的自我修养，大神的文章
-- [《三种docstring示例》] (http://bwanamarko.alwaysdata.net/napoleon/format_exception.html)
-- [《Simple python style guide》] (http://liyangliang.me/posts/2015/08/simple-python-style-guide/)
-- [《python编程规范》] (http://blog.ganyutao.com/downloading/python%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.pdf)
-- [《practice-go》] (https://dave.cheney.net/practical-go/presentations/qcon-china.html)
+#### - [PEP8.org] (http://pep8.org/)
+#### - [PEP 8 -- Style Guide for Python Code] (https://www.python.org/dev/peps/pep-0008/ )
+#### - [Google开源项目风格指南-Python风格指南](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/ )_ Google风格的docstring比较赞
+#### - [API_coding_style] (http://deeplearning.net/software/pylearn/v2_planning/API_coding_style.html  )
+#### - [code-example] (https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html )
+#### - [编写优雅代码] (http://www.kancloud.cn/kancloud/sina-boot-camp/64003  )  新浪微博的培训课程，可以学习一下
+#### - [烂代码的那些事] (http://blog.2baxb.me/archives/1343/ )  Axb的自我修养，大神的文章
+#### - [三种docstring示例](http://bwanamarko.alwaysdata.net/napoleon/format_exception.html   )
+#### - [Simple python style guide](http://liyangliang.me/posts/2015/08/simple-python-style-guide/ )
+#### - [python编程规范] (http://blog.ganyutao.com/downloading/python%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.pdf )
+#### - [practice-go](https://dave.cheney.net/practical-go/presentations/qcon-china.html )
 
-+++
+---
+##  编程范式
 
+---
+##  敏捷与TDD
+
+---
+##  业务代码规范
+
+---
+##  异常处理
+
+---
+##  安全处理
+
+---
 ##  编程范式
 
 - Python支持多重编程范式，过程式(Procedural)，面向对象(OOP)，简单函数式(Functional)编程。
@@ -80,25 +103,24 @@
 - 通常能用函数完成功能的就使用函数。当你无法判断哪种方式比较好的时候，请在解释器里边 `import this` 看看。
 - 当可以实现一样的功能时，往往简单易懂的方式就是最好的。
 
----
++++
 
 ##  一些参考:
 
-* 《requests》 (https://github.com/kennethreitz/requests) requests库是接口设计的典范，可以参考参考。
-* 《Python3 面向对象编程》 (https://book.douban.com/subject/26468916/) 关于Python面向对象和一些设计模式。
-* 《OOP vs Functional Programming vs Procedural》 (http://stackoverflow.com/questions/552336/oop-vs-functional-programming-vs-procedural)
-*
-*
-*
+####- [requests] (https://github.com/kennethreitz/requests) requests库是接口设计的典范，可以参考参考。
+####- [Python3 面向对象编程](https://book.douban.com/subject/26468916/) 关于Python面向对象和一些设计模式。
+####- [OOP vs Functional Programming vs Procedural](http://stackoverflow.com/questions/552336/oop-vs-functional-programming-vs-procedural)
 
----
+
+
++++
 
 ###  何谓Pythonic?
 
 - Python的世界里你会听到这个词"Pythonic"，大概就是指代码符合Python的惯用法，使用的都是Python的语法糖(我觉得可以翻译为『地道』)。
 - 比如从其他语言转到Python的写出来的代码很可能受到以前思维方式的影响(别像 java 一样写一堆 getter/setter)，写出来的代码不够Pythonic
 
----
++++
 
 ####  Pythonic的代码
 ```
@@ -129,9 +151,9 @@
 
 #### 敏捷与TDD(中华田园敏捷开发：快糙猛，产出一堆 shit)
 
-------
 - 敏捷TDD(Test-driven development)
-- 因为Python是动态类型语言，不像静态语言可以编译期检查，很多问题运行时暴露出来，而且动态语言语法灵活也容易刨坑。用TDD是可以提升代码质量的，虽然有时候完全用TDD可能有些死板，但是TDD的一些思想还是很值得借鉴：
+- Python是动态类型语言，不像静态语言可以编译期检查，很多问题运行时暴露出来，而且动态语言语法灵活也容易刨坑
+- 用TDD是可以提升代码质量的，虽然有时候完全用TDD可能有些死板，但是TDD的一些思想还是很值得借鉴：
 
 * 测试最重要的是对架构和设计的影响，不是为了测试而测试。一般难以测试的代码往往是设计不好，耦合严重的代码。没有测试的代码同时也给重构带来压力和隐患。
 
@@ -143,37 +165,39 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 感兴趣可以试试极限编程中的测试驱动开发和结对编程。
 下边是一些参考:
 
-* `《COMPREHENSIVE GUIDE TO CODE QUALITY: BEST PRACTICES AND TOOLS》 <http://codingsans.com/blog/code-quality>`_
-* `《敏捷开发的艺术》 <https://book.douban.com/subject/4037534/>`_
-* `《敏捷技能修炼》 <https://book.douban.com/subject/11614307/>`_  实践出真知
-* `《Tips for agile developers》 <http://web2.0coder.com/archives/92>`_
-* `《pytest: helps you write better programs》 <http://pytest.org/latest/>`_
-* `《代码整洁之道》 <https://book.douban.com/subject/5442024/>`_
-* `《编写可读代码的艺术》 <https://book.douban.com/subject/10797189/>`_ 代码首先是写给人看的
-* `《重构-改善既有代码设计》 <https://book.douban.com/subject/4262627/>`_
-* `《软件调试修炼之道》 <https://book.douban.com/subject/6398127/>`_ 了解下调试和跟踪技术。
-* `《测试的道理》 <http://www.yinwang.org/blog-cn/2016/09/14/tests>`_ 垠神的博客
+ - [COMPREHENSIVE GUIDE TO CODE QUALITY: BEST PRACTICES AND TOOLS](http://codingsans.com/blog/code-quality/)
+ - [敏捷开发的艺术](https://book.douban.com/subject/4037534/)
+ - [敏捷技能修炼](https://book.douban.com/subject/11614307/)
+ - [Tips for agile developers](http://web2.0coder.com/archives/92/)
+ - [pytest: helps you write better programs](http://pytest.org/latest/)
+ - [代码整洁之道](https://book.douban.com/subject/5442024/)
+ - [编写可读代码的艺术](https://book.douban.com/subject/10797189/) 代码首先是写给人看的
+ - [重构-改善既有代码设计](https://book.douban.com/subject/4262627/)
+ - [软件调试修炼之道](https://book.douban.com/subject/6398127/) 了解下调试和跟踪技术。
+ - [测试的道理](http://www.yinwang.org/blog-cn/2016/09/14/tests/)  垠神的博客
 
+---
 
-业务代码的一些常见原则
-----------------------------
-对于什么是好代码，什么是坏代码我现在还没有太多经验，但是最近工作接手别人的代码感觉困难重重，还是too naive啊。每个人实力不同，风格不同，一起协作的时候确实会遇到很多问题和分歧。感觉code review啥的还是很有必要的，可以让菜鸟学习下老鸟的经验，也可以让老鸟指导下菜鸟的失误，同时避免过于个人化的糟糕风格（比如让人想立马离职的高达成百上千行的复杂函数，比如上来一堆不知道干啥的幻数，比如上来就 `from shit import *` 导致俺的编辑工具找不到定义，比如整个项目没有一行测试代码，比如不知道用logger，全用print+眼珠子瞅，一个bug找半天，比如没有pep8检测导致你的环境打开别人的代码彪了一堆警告......)。
+###业务代码的一些常见原则
+
+- 对于什么是好代码，什么是坏代码我现在还没有太多经验，但是最近工作接手别人的代码感觉困难重重，还是too naive啊。每个人实力不同，风格不同，一起协作的时候确实会遇到很多问题和分歧。感觉code review啥的还是很有必要的，可以让菜鸟学习下老鸟的经验，也可以让老鸟指导下菜鸟的失误，同时避免过于个人化的糟糕风格（比如让人想立马离职的高达成百上千行的复杂函数，比如上来一堆不知道干啥的幻数，比如上来就 `from shit import *` 导致俺的编辑工具找不到定义，比如整个项目没有一行测试代码，比如不知道用logger，全用print+眼珠子瞅，一个bug找半天，比如没有pep8检测导致你的环境打开别人的代码彪了一堆警告......)。
 
 说好的规范呢，说好的设计模式呢，说好的高内聚低耦合呢？说好的KISS原则呢？说好的DYR原则呢？其实俺只是想多活几年，至少不要到三十岁头发掉光。啥设计模式的可以不用，能干活的代码就行，牢记几个原则，没事的时候对复杂的东西重构下，代码不能自解释的搞搞文档，不被队友坑同时不坑队友，俺就心满意足了 ，遇到坑队友就等着加班和折寿吧:(。最后还是列举一下常用原则、思想和注意事项吧(下边原则是笔者阅读很多工程相关的书后总结的，比较宽泛，最好import this看看python之禅，很多思想是通用的):
 老手区别于新手的一个重要特点就是，他能用掌握的代码、模式、工程知识来把复杂度控制在合理的范围之内，让代码具有可维护性，很多新手只会直来直去，需求多复杂就能把代码写得多复杂。
 
++++
 
-* 可读性第一定理：代码的写法应当使别人理解它的时间最小化。如果有非常直白的表现方式，就不要用语法糖复杂化，导致理解困难。不要牺牲可读性过度追求短代码，合适的语法糖用在合适的地方，很多新手会炫技使用一些技巧导致代码难以阅读和维护。
-* KISS原则，Keep It Simple, Stupid。能简单的绝对不要复杂，不要炫耀代码技巧，简单可读最重要，后人会感谢你的，软件构建的核心就是控制复杂度。开发可以工作的、最简单的解决方案。除非有不可辩驳的原因，否则不要使用模式、原则和高难度技术之类的东西。很多新手没有控制复杂度的意识，很快弄出一堆难以维护的代码。
-* DRY原则，Don't Repeat Yourself。代码复杂重复了就及时抽取出来，至少不会碰到大问题。当然不要矫枉过正，过度追求设计和通用可能导致难以维护和理解。重复代码一旦接口变动的时候就是灾难，要修改很多地方，一定要十分警惕代码重复(警惕复制粘贴，往往代码重复是设计、抽象不合理、意图不明确的表现，而且复制代码经常会出现忘记修改一些细节产生 bug)。事不过三原则。Prefer duplication over the wrong abstraction. - Sandi Metz
-* YAGNI(You Aren't Gonna Need It)，不要猜测性编码，不用的及时删除，估计以后也不太可能会用到(经验表名你觉得将来可能会用到的基本都用不到，最后成了死代码)，冗余的无用代码会给维护者带来很多混淆和麻烦。Build the simplest thing that we need right now。『少即是多』
-* SLAP(Single Level of Abstraction Principle): 保持一个方法中的代码在同一个抽象层。
-* Clean Coder Rule: Always leave the code cleaner than you found it.  不用的代码及时清除，留着只会造成冗余和误解(如果你认为某段代码将来可能会用到，我明确告诉你基本上它是用不到的)。笔者经验是用动态语言写代码很难写出 clean code，必须上各种静态检测工具和规范来约束，防止代码腐化。
-* Design for failure. 微服务中一切都有可能失败。
-* 最少惊讶原则。让代码的副作用尽量最小或没有，函数式编程相比之下 bug 会更少。(有统计数据支撑的结论)
-* 快速失败，灵活使用断言。契约式编程(先验条件和后置条件)，越早失败，越容易排查错误。
-* 增量式编程。及时清理技术债务，代码坏味道，防止『破窗』。及时重构不合理代码，及时进行测试，『慢即是快』，越早发现错误修复成本越低。很多统计数据的结果都显示，一名程序员在公司每天能产出的工业级别的代码不会超过百行。
-* 隐藏复杂性。如果复杂性避免不了，应该尽让内部复杂，接口要保持简单易用，而不要因为业务逻辑复杂就堆砌一堆shit。合理抽象，隐藏细节。
+- 可读性第一定理：代码的写法应当使别人理解它的时间最小化。如果有非常直白的表现方式，就不要用语法糖复杂化，导致理解困难。不要牺牲可读性过度追求短代码，合适的语法糖用在合适的地方，很多新手会炫技使用一些技巧导致代码难以阅读和维护。
+- KISS原则，Keep It Simple, Stupid。能简单的绝对不要复杂，不要炫耀代码技巧，简单可读最重要，后人会感谢你的，软件构建的核心就是控制复杂度。开发可以工作的、最简单的解决方案。除非有不可辩驳的原因，否则不要使用模式、原则和高难度技术之类的东西。很多新手没有控制复杂度的意识，很快弄出一堆难以维护的代码。
+- DRY原则，Don't Repeat Yourself。代码复杂重复了就及时抽取出来，至少不会碰到大问题。当然不要矫枉过正，过度追求设计和通用可能导致难以维护和理解。重复代码一旦接口变动的时候就是灾难，要修改很多地方，一定要十分警惕代码重复(警惕复制粘贴，往往代码重复是设计、抽象不合理、意图不明确的表现，而且复制代码经常会出现忘记修改一些细节产生 bug)。事不过三原则。Prefer duplication over the wrong abstraction. - Sandi Metz
+- YAGNI(You Aren't Gonna Need It)，不要猜测性编码，不用的及时删除，估计以后也不太可能会用到(经验表名你觉得将来可能会用到的基本都用不到，最后成了死代码)，冗余的无用代码会给维护者带来很多混淆和麻烦。Build the simplest thing that we need right now。『少即是多』
+- SLAP(Single Level of Abstraction Principle): 保持一个方法中的代码在同一个抽象层。
+- Clean Coder Rule: Always leave the code cleaner than you found it.  不用的代码及时清除，留着只会造成冗余和误解(如果你认为某段代码将来可能会用到，我明确告诉你基本上它是用不到的)。笔者经验是用动态语言写代码很难写出 clean code，必须上各种静态检测工具和规范来约束，防止代码腐化。
+- Design for failure. 微服务中一切都有可能失败。
+- 最少惊讶原则。让代码的副作用尽量最小或没有，函数式编程相比之下 bug 会更少。(有统计数据支撑的结论)
+- 快速失败，灵活使用断言。契约式编程(先验条件和后置条件)，越早失败，越容易排查错误。
+- 增量式编程。及时清理技术债务，代码坏味道，防止『破窗』。及时重构不合理代码，及时进行测试，『慢即是快』，越早发现错误修复成本越低。很多统计数据的结果都显示，一名程序员在公司每天能产出的工业级别的代码不会超过百行。
+- 隐藏复杂性。如果复杂性避免不了，应该尽让内部复杂，接口要保持简单易用，而不要因为业务逻辑复杂就堆砌一堆shit。合理抽象，隐藏细节。
 * 一次只做一件事(Do one thing, and do it well)。尽量避免复杂度过高的逻辑，尽量做到代码简单，意图明确。
 * 高内聚，低耦合。模块化。层次化。意义相近的东西应该放到同一个地方。写代码的时候想着怎么测试它就能避免过度复杂，耦合严重的代码。
 * 代码应当易于理解。 《代码大全》、《编写可读代码的艺术》、《代码整洁之道》啥的都是告诉你代码最好自解释，好理解。记住代码首先是给人看的，其次才是让机器执行的，不要过度设计。同时警惕你觉得过于『精巧』的实现，很有可能成为以后代码维护的大坑。可读性基本定律：代码的写法应该使别人理解它所需的时间最小化。聪明的程序员可能写出复杂、精巧的代码(但是对于整个团队的维护来说未必是好事)，专业的程序员会写出可读性高的代码。
@@ -208,29 +232,34 @@ update: 经验表明，TDD未必是必要的，但是单元测试是很必要的
 
 `《如何在Python里应用SOLID原则》 <http://aju.space/2016/06/17/use-S-O-L-I-D-in-python.html>`_
 
-Unix 哲学(来自《Unix 编程艺术》)，如果你对 unix/linux 的设计哲学和发展历史感兴趣可以看看这本书（我经常安利后端开发者使用 mac/linux 系统，它们在学术界和工程界更受欢迎）：
 
-* 模块原则：使用简单的接口拼合简单的部件
-* 清晰原则：清晰胜于机巧
-* 组合原则：设计时考虑拼接组合。组合优先于继承
-* 分离原则：策略同机制分离，接口同引擎分离
-* 简洁原则：控制复杂度
-* 吝啬原则：除非却无它法，不要编写庞大的程序
-* 透明性原则：设计要可见，以便审查和调试
-* 健壮原则：健壮源于透明与简洁
-* 表示原则：把知识叠入数据以求逻辑质朴而健壮
-* 通俗原则：接口设计避免标新立异
-* 缄默原则：如果一个程序没什么好说的，就缄默
-* 补救原则：出现异常时，马上退出并给出足够的错误信息
-* 经济原则：宁花机器一分钟，不花程序员一秒
-* 生成原则：避免手工hack，尽量编写程序去生成程序
-* 优化原则：雕琢前先要有原型，跑之前先学会走
-* 多样原则：绝不相信所谓『不二法门』的断言
-* 扩展原则：设计着眼未来，未来总比预想来得快
++++
+ 
+### Unix 哲学(来自《Unix 编程艺术》)
+##### 如果你对 unix/linux 的设计哲学和发展历史感兴趣可以看看这本书
 
-python代码坏味道(新手经常犯的错误)
---------------------------------------
-下边是笔者学习和维护代码的过程中总结的一些经验和发现的一些问题，可能有些地方会有分歧，python在工程实践方面的资料不如其他语言那么成熟，如果有分歧欢迎提 issue 讨论, 仅供参考（通常可能需要数月甚至数年的工程训练才能写出良好风格的代码）：
+- 模块原则：使用简单的接口拼合简单的部件
+- 清晰原则：清晰胜于机巧
+- 组合原则：设计时考虑拼接组合。组合优先于继承
+- 分离原则：策略同机制分离，接口同引擎分离
+- 简洁原则：控制复杂度
+- 吝啬原则：除非却无它法，不要编写庞大的程序
+- 透明性原则：设计要可见，以便审查和调试
+- 健壮原则：健壮源于透明与简洁
+- 表示原则：把知识叠入数据以求逻辑质朴而健壮
+- 通俗原则：接口设计避免标新立异
+- 缄默原则：如果一个程序没什么好说的，就缄默
+- 补救原则：出现异常时，马上退出并给出足够的错误信息
+- 经济原则：宁花机器一分钟，不花程序员一秒
+- 生成原则：避免手工hack，尽量编写程序去生成程序
+- 优化原则：雕琢前先要有原型，跑之前先学会走
+- 多样原则：绝不相信所谓『不二法门』的断言
+- 扩展原则：设计着眼未来，未来总比预想来得快
+
++++
+# python代码坏味道(新手经常犯的错误)
+
+- 下边是笔者学习和维护代码的过程中总结的一些经验和发现的一些问题，可能有些地方会有分歧，python在工程实践方面的资料不如其他语言那么成熟，如果有分歧欢迎提 issue 讨论, 仅供参考（通常可能需要数月甚至数年的工程训练才能写出良好风格的代码）：
 
 风格相关:
 
